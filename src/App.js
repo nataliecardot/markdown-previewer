@@ -15,7 +15,7 @@ function App() {
           <FormGroup controlId="formControlsTextarea">
             {/* Label is for CSS styling, not a Bootstrap class */}
             <FormLabel class="lead label">Markdown Input</FormLabel>
-            <FormControl componentClass="textarea" placeholder="Enter some markdown." />
+            <FormControl componentClass="textarea" style={{height: 200}} placeholder="Enter some markdown." />
           </FormGroup>
         </div>
       </div>
@@ -23,6 +23,7 @@ function App() {
       <div class="row mt-4 justify-content-center">
         <div class="col-xl-11">
           <p class="lead label">Markdown Output</p>
+          <div></div>
         </div>
       </div>
     </div>
