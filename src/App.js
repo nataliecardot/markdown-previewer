@@ -8,9 +8,15 @@ let marked = require('marked');
 
 // Since v. 16.8, React supported hooks -- allows you to use state in a function component. Create React App has been using function component instead of class component to help ease the transition https://stackoverflow.com/questions/55889693/why-does-create-react-app-now-use-a-function-component-for-app
 // Changed from function App() { } to arrow function component
+// Note! Don't need to bind this when using arrow function (Why? See https://stackoverflow.com/questions/52979915/why-we-dont-need-to-bind-the-arrow-function-in-react)
 // See https://www.robinwieruch.de/react-function-component
 const App = () => {
   const [markdown, setMarkdown] = useState('');
+
+  // Reminder: can't use experimental class fields syntax since this isn't a class component
+  const updateMarkdown = markdown => {
+    setMarkdown(markdown);
+  }
 
   return (
     <div className="App container">
@@ -20,7 +26,7 @@ const App = () => {
           <FormGroup controlId="formControlsTextarea">
             {/* Label is for CSS styling, not a Bootstrap class */}
             <FormLabel class="lead label">Markdown Input</FormLabel>
-            <FormControl componentClass="textarea" style={{height: 200}} value={markdown} placeholder="Enter some markdown." />
+            <FormControl componentClass="textarea" style={{height: 200}} value={markdown} placeholder="Enter some markdown." onChange={event => updateMarkdown(event.target.value)} />
           </FormGroup>
         </div>
       </div>
