@@ -16,4 +16,4 @@ It was built using React (including React [Hooks](https://reactjs.org/docs/hooks
 
 Markdown is parsed with [marked](https://www.npmjs.com/package/marked).
 
-This app was built using React. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Create React App](https://github.com/facebook/create-react-app) was used to bootstrap the app.
