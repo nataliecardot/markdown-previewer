@@ -13,7 +13,7 @@ let marked = require('marked');
 const App = () => {
   const [markdown, setMarkdown] = useState('');
 
-  // Reminder: can't use experimental class fields syntax since this isn't a class component
+  // Reminder: Can't use experimental class fields syntax since this isn't a class component
   const updateMarkdown = markdown => {
     setMarkdown(markdown);
   }
@@ -34,7 +34,8 @@ const App = () => {
       <div class="row mt-4 justify-content-center">
         <div class="col-xl-11">
           <p class="lead label">Markdown Output</p>
-          <div></div>
+          <div dangerouslySetInnerHTML={{__html: marked(markdown)}}>
+          </div>
         </div>
       </div>
     </div>
