@@ -13,7 +13,6 @@ let marked = require('marked');
 const App = () => {
   const [markdown, setMarkdown] = useState('');
 
-  // Reminder: Can't use experimental class fields syntax since this isn't a class component
   const updateMarkdown = markdown => {
     setMarkdown(markdown);
   }
