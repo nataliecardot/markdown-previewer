@@ -1,9 +1,7 @@
-.App {
-  text-align: center;
-}
-
 .label {
   font-size: 30px;
+  border-left: 7px solid #dcdcdc;
+  padding-left: 7px;
 }
 
 h1 {
