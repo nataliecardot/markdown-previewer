@@ -26,7 +26,7 @@ const App = () => {
           <FormGroup controlId="formControlsTextarea">
             {/* Label is for CSS styling, not a Bootstrap class */}
             <FormLabel class="lead label">Markdown Input</FormLabel>
-            <FormControl componentClass="textarea" style={{height: 200}} value={markdown} placeholder="Enter some markdown." onChange={event => updateMarkdown(event.target.value)} />
+            <FormControl as="textarea" style={{height: 200}} value={markdown} placeholder="Enter some markdown." onChange={event => updateMarkdown(event.target.value)} />
           </FormGroup>
         </div>
       </div>
